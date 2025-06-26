@@ -105,6 +105,21 @@ Mostrar donde esta Git, la console de R, la terminal.
 
 Alguién se atreve a compartir?
 
+
+## Prevención: saber donde estás {.center}
+
+. . .
+
+:eyes: Staging area
+
+. . .
+
+:eyes: Rama
+
+. . .
+
+:eyes: Remote (GitHub?) vs local (tu ordenador)
+
 ## Como vamos a trabajar {.center}
 
 En carpetas temporarias creadas por saperlipopette.
@@ -163,20 +178,6 @@ install.packages(
 
 :::
 
-
-## Prevención: saber donde estás {.center}
-
-. . .
-
-:eyes: Staging area
-
-. . .
-
-:eyes: Rama
-
-. . .
-
-:eyes: Remote (GitHub?) vs local (tu ordenador)
 
 ## Prevención: escapar de Vim {.center}
 
