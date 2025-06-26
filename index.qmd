@@ -114,6 +114,11 @@ install.packages(
 )
 ```
 
+## {background-image="saperlipopette.png"}
+
+::: {.notes}
+diagram
+:::
 
 
 ## Prevención: saber donde estás {.center}

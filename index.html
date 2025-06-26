@@ -242,6 +242,11 @@
 <section class="slide level2 center">
 <h2>En realidad…</h2>
 <p>A veces duele. <span class="emoji" data-emoji="scream">😱</span></p>
+<p>Podéis compartir cosas feas que os pasaron con Git?</p>
+</section>
+<section class="slide level2 center">
+<h2>En realidad…</h2>
+<p>A veces duele. <span class="emoji" data-emoji="scream">😱</span></p>
 <div>
 <ul>
 <li class="fragment">Push de datos secretos o largos</li>
@@ -257,6 +262,49 @@
 <p><span class="emoji" data-emoji="muscle">💪</span> Prevenir algunos problemas</p>
 <p><span class="emoji" data-emoji="muscle">💪</span> Practicar la salida de algunas situaciones horribles</p>
 </div>
+</section>
+<section class="slide level2 center">
+<h2>Como vamos a trabajar</h2>
+<ul>
+<li>En su entorno de Git habitual. Podéis escribir lo que es su forma de usar Git? Yo: Positron+terminal a veces.</li>
+</ul>
+<div class="fragment">
+<ul>
+<li>En carpetas temporarias creadas por saperlipopette o no</li>
+</ul>
+</div>
+</section>
+<section class="slide level2 center">
+<h2>{saperlipopette}</h2>
+<div class="fragment">
+<p><del>Una herramienta para usar Git</del></p>
+</div>
+<div class="fragment">
+<p>Un paquete R para <strong>crear ejercicios en carpetas propias</strong>.</p>
+<p><a href="https://docs.ropensci.org/saperlipopette/" class="uri">https://docs.ropensci.org/saperlipopette/</a></p>
+</div>
+<div class="fragment">
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href=""></a><span class="fu">install.packages</span>(</span>
+<span id="cb1-2"><a href=""></a>  <span class="st">'saperlipopette'</span>, </span>
+<span id="cb1-3"><a href=""></a>  <span class="at">repos =</span> <span class="fu">c</span>(<span class="st">'https://packages.ropensci.org'</span>, <span class="st">'https://cloud.r-project.org'</span>)</span>
+<span id="cb1-4"><a href=""></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section class="slide level2" data-background-image="saperlipopette.png">
+<h2></h2>
+<aside class="notes">
+<p>diagram</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section class="slide level2 center">
 <h2>Prevención: saber donde estás</h2>
@@ -280,23 +328,23 @@
 <section class="slide level2 center">
 <h2>Arreglar el editor de Git</h2>
 <p>Crea un proyecto Git</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href=""></a>carpeta <span class="ot">&lt;-</span> withr<span class="sc">::</span><span class="fu">local_tempdir</span>()</span>
-<span id="cb1-2"><a href=""></a>usethis<span class="sc">::</span><span class="fu">create_project</span>(carpeta)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href=""></a>carpeta <span class="ot">&lt;-</span> withr<span class="sc">::</span><span class="fu">local_tempdir</span>()</span>
+<span id="cb2-2"><a href=""></a>usethis<span class="sc">::</span><span class="fu">create_project</span>(carpeta)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>En la carpeta</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href=""></a>usethis<span class="sc">::</span><span class="fu">use_git</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href=""></a>usethis<span class="sc">::</span><span class="fu">use_git</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Proba tu editor</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource sh number-lines code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href=""></a><span class="fu">git</span> commit <span class="at">--allow-empty</span></span>
-<span id="cb3-2"><a href=""></a><span class="co"># se abre un editor</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource sh number-lines code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href=""></a><span class="fu">git</span> commit <span class="at">--allow-empty</span></span>
+<span id="cb4-2"><a href=""></a><span class="co"># se abre un editor</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section class="slide level2 center">
 <h2>Arreglar el editor de Git</h2>
-<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href=""></a><span class="co"># tu configuración</span></span>
-<span id="cb4-2"><a href=""></a>config <span class="ot">&lt;-</span> gert<span class="sc">::</span><span class="fu">git_config_global</span>()</span>
-<span id="cb4-3"><a href=""></a><span class="co"># ya tienes una preferencia de editor?</span></span>
-<span id="cb4-4"><a href=""></a>config<span class="sc">$</span>value[config<span class="sc">$</span>name <span class="sc">==</span> <span class="st">"core.editor"</span>]</span>
-<span id="cb4-5"><a href=""></a><span class="co"># cambiala si hace falta</span></span>
-<span id="cb4-6"><a href=""></a>gert<span class="sc">::</span><span class="fu">git_config_global_set</span>(<span class="at">name =</span> <span class="st">"core.editor"</span>, <span class="at">value =</span> <span class="sc">&lt;</span>QUÉ<span class="sc">-</span>PREFIERES<span class="sc">&gt;</span>)</span>
-<span id="cb4-7"><a href=""></a><span class="co"># para mi es "/usr/bin/positron --wait"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href=""></a><span class="co"># tu configuración</span></span>
+<span id="cb5-2"><a href=""></a>config <span class="ot">&lt;-</span> gert<span class="sc">::</span><span class="fu">git_config_global</span>()</span>
+<span id="cb5-3"><a href=""></a><span class="co"># ya tienes una preferencia de editor?</span></span>
+<span id="cb5-4"><a href=""></a>config<span class="sc">$</span>value[config<span class="sc">$</span>name <span class="sc">==</span> <span class="st">"core.editor"</span>]</span>
+<span id="cb5-5"><a href=""></a><span class="co"># cambiala si hace falta</span></span>
+<span id="cb5-6"><a href=""></a>gert<span class="sc">::</span><span class="fu">git_config_global_set</span>(<span class="at">name =</span> <span class="st">"core.editor"</span>, <span class="at">value =</span> <span class="sc">&lt;</span>QUÉ<span class="sc">-</span>PREFIERES<span class="sc">&gt;</span>)</span>
+<span id="cb5-7"><a href=""></a><span class="co"># para mi es "/usr/bin/positron --wait"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section class="slide level2 center">
 <h2>Arreglar el editor de Git</h2>
@@ -314,22 +362,6 @@
 <section class="slide level2 center">
 <h2>A practicar situaciones horribles!</h2>
 <p>Haré demos y después las haréis también.</p>
-</section>
-<section class="slide level2 center">
-<h2>{saperlipopette}</h2>
-<div class="fragment">
-<p><del>Una herramienta para usar Git</del></p>
-</div>
-<div class="fragment">
-<p>Un paquete R para <strong>crear ejercicios en carpetas propias</strong>.</p>
-<p><a href="https://docs.ropensci.org/saperlipopette/" class="uri">https://docs.ropensci.org/saperlipopette/</a></p>
-</div>
-<div class="fragment">
-<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href=""></a><span class="fu">install.packages</span>(</span>
-<span id="cb5-2"><a href=""></a>  <span class="st">'saperlipopette'</span>, </span>
-<span id="cb5-3"><a href=""></a>  <span class="at">repos =</span> <span class="fu">c</span>(<span class="st">'https://packages.ropensci.org'</span>, <span class="st">'https://cloud.r-project.org'</span>)</span>
-<span id="cb5-4"><a href=""></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
 </section>
 <section class="slide level2 center">
 <h2>Mi último commit me da vergüenza 1/2</h2>
@@ -479,6 +511,7 @@
           overflow: hidden!important;
           display:block!important;
       }</style></aside>
+<p>blabla</p>
 </section>
 <section class="slide level2">
 <h2>Git resources: General books</h2>
