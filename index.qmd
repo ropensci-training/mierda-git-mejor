@@ -107,7 +107,7 @@ Alguién se atreve a compartir?
 
 ## Como vamos a trabajar {.center}
 
-En carpetas temporarias creadas por saperlipopette o no.
+En carpetas temporarias creadas por saperlipopette.
 
 . . .
 
