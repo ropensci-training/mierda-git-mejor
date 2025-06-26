@@ -167,7 +167,7 @@ install.packages(
 
 - Llama una función desde una sesión R.
 
-- Va a la carpeta creada. 
+- Va a la carpeta creada (se ve en el output). 
 
 - Abre R en esta carpeta, lee las instrucciones.
 
@@ -260,13 +260,6 @@ carpeta <- withr::local_tempdir()
 saperlipopette::exo_latest_message(carpeta)
 ```
 
-## saperlipopette
-
-- Crea ejercicios en carpetas.
-
-- Muestra donde es el nuevo ejercicio, por si no se abre de forma automatica.
-
-- saperlipopette == R. Tu trabajo de Git == como quieres.
 
 ## Mi último commit me da vergüenza {.center}
 
