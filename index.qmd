@@ -134,11 +134,9 @@ install.packages(
 )
 ```
 
-## {background-image="saperlipopette.png"}
+## saperlipopette
 
-::: {.notes}
-diagram
-:::
+![](saperlipopette.png)
 
 ## saperlipopette
 
