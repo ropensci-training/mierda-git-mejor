@@ -140,6 +140,14 @@ install.packages(
 
 ## saperlipopette
 
+- R para crear el ejercicio en otra carpeta.
+
+- R en la nueva sesión para leer las instrucionnes.
+
+- Tus herramientas usuales para solucionar el problema de Git!
+
+## saperlipopette
+
 ::: {.incremental}
 
 - Llama una función desde una sesión R.
