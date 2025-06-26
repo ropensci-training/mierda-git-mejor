@@ -87,11 +87,27 @@ A veces duele. :scream:
 
 ## Como vamos a trabajar {.center}
 
-- En su entorno de Git habitual. Podéis escribir lo que es su forma de usar Git? Yo: Positron+terminal a veces.
+En su entorno de Git habitual. 
 
 . . .
 
-- En carpetas temporarias creadas por saperlipopette o no
+Podéis escribir lo que es su forma de usar Git? Yo: Positron+terminal a veces.
+
+## RStudio {.center}
+
+Mostrar donde esta Git, la console de R, la terminal.
+
+## Positron {.center}
+
+Mostrar donde esta Git, la console de R, la terminal.
+
+## Otra IDE {.center}
+
+Alguién se atreve a compartir?
+
+## Como vamos a trabajar {.center}
+
+En carpetas temporarias creadas por saperlipopette o no
 
 ## {saperlipopette} {.center}
 
@@ -118,6 +134,23 @@ install.packages(
 
 ::: {.notes}
 diagram
+:::
+
+## saperlipopette
+
+::: {.incremental}
+
+- Llama una función desde una sesión R.
+
+- Va a la carpeta creada. 
+
+- Abre R en esta carpeta, lee las instrucciones.
+
+- Trabaja con tus herramientas para Git o la terminal.
+
+- Cierra la sesion de ejercicio.
+
+
 :::
 
 
