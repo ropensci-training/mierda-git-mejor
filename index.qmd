@@ -401,7 +401,7 @@ Gracias a Andrea Gomez Vargas, Ariana Bardauil y Yanina Bellini Saibene.
 ::: {.notes}
 toilet paper rolls wrapped in different colors https://www.pexels.com/photo/toilet-paper-rolls-wrapped-in-different-colors-4031866/
 :::
-blabla
+
 
 ## Git resources: General books
 
