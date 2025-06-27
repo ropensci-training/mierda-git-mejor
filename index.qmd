@@ -105,6 +105,15 @@ Mostrar donde esta Git, la console de R, la terminal.
 
 Alguién se atreve a compartir?
 
+## Prevención: `usethis::git_sitrep()` {.center}
+
+```r
+# hoy solo Git
+usethis::git_sitrep(tool = "git", scope = "user")
+```
+
+<https://usethis.r-lib.org/reference/git_sitrep.html>
+
 
 ## Prevención: saber donde estás {.center}
 
@@ -153,7 +162,9 @@ install.packages(
 
 ![](saperlipopette.png)
 
-## saperlipopette
+## saperlipopette: R para crear ejercicios de Git
+
+::: {.incremental}
 
 - R para crear el ejercicio en otra carpeta.
 
@@ -161,7 +172,9 @@ install.packages(
 
 - Tus herramientas usuales para solucionar el problema de Git!
 
-## saperlipopette
+:::
+
+## saperlipopette: cómo usar el paquete
 
 ::: {.incremental}
 
@@ -190,38 +203,12 @@ A lo mejor no entres!
 
 ## Arreglar el editor de Git {.center}
 
-Crea un proyecto Git
-
 ```r
+withr::local_language("es")
 carpeta <- withr::local_tempdir()
-usethis::create_project(carpeta)
+saperlipopette::exo_check_editor(carpeta)
 ```
 
-En la carpeta
-
-```r
-usethis::use_git()
-```
-
-Proba tu editor
-
-```sh
-git commit --allow-empty
-# se abre un editor
-
-```
-
-## Arreglar el editor de Git {.center}
-
-```r
-# tu configuración
-config <- gert::git_config_global()
-# ya tienes una preferencia de editor?
-config$value[config$name == "core.editor"]
-# cambiala si hace falta
-gert::git_config_global_set(name = "core.editor", value = <QUÉ-PREFIERES>)
-# para mi es "/usr/bin/positron --wait"
-```
 ## Arreglar el editor de Git {.center}
 
 Tienes 10 minutos para arreglarlo! 
@@ -231,12 +218,12 @@ Tienes 10 minutos para arreglarlo!
 * Sistema operativo: Windows, macOS, Linux.
 * Elegir un editor. RStudio? Positron? Code? Otro editor?
 * Funciona el editor desde el terminal? Si no, cosa de PATH.
-* Usar `gert::git_config_global_set(name = "core.editor", value = <QUÉ-PREFIERES>)` o la terminal. Por ejemplo en vez de "code" poner "rstudio".
+* <https://docs.github.com/es/get-started/git-basics/associating-text-editors-with-git>
 
 :::
 
 
-<https://docs.github.com/es/get-started/git-basics/associating-text-editors-with-git>
+
 
 ## A practicar situaciones horribles! {.center}
 

@@ -283,6 +283,12 @@
 <p>Alguién se atreve a compartir?</p>
 </section>
 <section class="slide level2 center">
+<h2>Prevención: <code>usethis::git_sitrep()</code></h2>
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href=""></a><span class="co"># hoy solo Git</span></span>
+<span id="cb1-2"><a href=""></a>usethis<span class="sc">::</span><span class="fu">git_sitrep</span>(<span class="at">tool =</span> <span class="st">"git"</span>, <span class="at">scope =</span> <span class="st">"user"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><a href="https://usethis.r-lib.org/reference/git_sitrep.html" class="uri">https://usethis.r-lib.org/reference/git_sitrep.html</a></p>
+</section>
+<section class="slide level2 center">
 <h2>Prevención: saber donde estás</h2>
 <div class="fragment">
 <p><span class="emoji" data-emoji="eyes">👀</span> Staging area</p>
@@ -311,10 +317,10 @@
 <p><a href="https://docs.ropensci.org/saperlipopette/" class="uri">https://docs.ropensci.org/saperlipopette/</a></p>
 </div>
 <div class="fragment">
-<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href=""></a><span class="fu">install.packages</span>(</span>
-<span id="cb1-2"><a href=""></a>  <span class="st">'saperlipopette'</span>, </span>
-<span id="cb1-3"><a href=""></a>  <span class="at">repos =</span> <span class="fu">c</span>(<span class="st">'https://packages.ropensci.org'</span>, <span class="st">'https://cloud.r-project.org'</span>)</span>
-<span id="cb1-4"><a href=""></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href=""></a><span class="fu">install.packages</span>(</span>
+<span id="cb2-2"><a href=""></a>  <span class="st">'saperlipopette'</span>, </span>
+<span id="cb2-3"><a href=""></a>  <span class="at">repos =</span> <span class="fu">c</span>(<span class="st">'https://packages.ropensci.org'</span>, <span class="st">'https://cloud.r-project.org'</span>)</span>
+<span id="cb2-4"><a href=""></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section class="slide level2">
@@ -322,15 +328,17 @@
 
 <img data-src="saperlipopette.png" class="r-stretch"></section>
 <section class="slide level2">
-<h2>saperlipopette</h2>
+<h2>saperlipopette: R para crear ejercicios de Git</h2>
+<div>
 <ul>
-<li><p>R para crear el ejercicio en otra carpeta.</p></li>
-<li><p>R en la nueva sesión para leer las instrucionnes.</p></li>
-<li><p>Tus herramientas usuales para solucionar el problema de Git!</p></li>
+<li class="fragment"><p>R para crear el ejercicio en otra carpeta.</p></li>
+<li class="fragment"><p>R en la nueva sesión para leer las instrucionnes.</p></li>
+<li class="fragment"><p>Tus herramientas usuales para solucionar el problema de Git!</p></li>
 </ul>
+</div>
 </section>
 <section class="slide level2">
-<h2>saperlipopette</h2>
+<h2>saperlipopette: cómo usar el paquete</h2>
 <div>
 <ul>
 <li class="fragment"><p>Llama una función desde una sesión R.</p></li>
@@ -350,24 +358,9 @@
 </section>
 <section class="slide level2 center">
 <h2>Arreglar el editor de Git</h2>
-<p>Crea un proyecto Git</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href=""></a>carpeta <span class="ot">&lt;-</span> withr<span class="sc">::</span><span class="fu">local_tempdir</span>()</span>
-<span id="cb2-2"><a href=""></a>usethis<span class="sc">::</span><span class="fu">create_project</span>(carpeta)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>En la carpeta</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href=""></a>usethis<span class="sc">::</span><span class="fu">use_git</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Proba tu editor</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource sh number-lines code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href=""></a><span class="fu">git</span> commit <span class="at">--allow-empty</span></span>
-<span id="cb4-2"><a href=""></a><span class="co"># se abre un editor</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section class="slide level2 center">
-<h2>Arreglar el editor de Git</h2>
-<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href=""></a><span class="co"># tu configuración</span></span>
-<span id="cb5-2"><a href=""></a>config <span class="ot">&lt;-</span> gert<span class="sc">::</span><span class="fu">git_config_global</span>()</span>
-<span id="cb5-3"><a href=""></a><span class="co"># ya tienes una preferencia de editor?</span></span>
-<span id="cb5-4"><a href=""></a>config<span class="sc">$</span>value[config<span class="sc">$</span>name <span class="sc">==</span> <span class="st">"core.editor"</span>]</span>
-<span id="cb5-5"><a href=""></a><span class="co"># cambiala si hace falta</span></span>
-<span id="cb5-6"><a href=""></a>gert<span class="sc">::</span><span class="fu">git_config_global_set</span>(<span class="at">name =</span> <span class="st">"core.editor"</span>, <span class="at">value =</span> <span class="sc">&lt;</span>QUÉ<span class="sc">-</span>PREFIERES<span class="sc">&gt;</span>)</span>
-<span id="cb5-7"><a href=""></a><span class="co"># para mi es "/usr/bin/positron --wait"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href=""></a>withr<span class="sc">::</span><span class="fu">local_language</span>(<span class="st">"es"</span>)</span>
+<span id="cb3-2"><a href=""></a>carpeta <span class="ot">&lt;-</span> withr<span class="sc">::</span><span class="fu">local_tempdir</span>()</span>
+<span id="cb3-3"><a href=""></a>saperlipopette<span class="sc">::</span><span class="fu">exo_check_editor</span>(carpeta)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section class="slide level2 center">
 <h2>Arreglar el editor de Git</h2>
@@ -377,10 +370,9 @@
 <li class="fragment">Sistema operativo: Windows, macOS, Linux.</li>
 <li class="fragment">Elegir un editor. RStudio? Positron? Code? Otro editor?</li>
 <li class="fragment">Funciona el editor desde el terminal? Si no, cosa de PATH.</li>
-<li class="fragment">Usar <code>gert::git_config_global_set(name = "core.editor", value = &lt;QUÉ-PREFIERES&gt;)</code> o la terminal. Por ejemplo en vez de “code” poner “rstudio”.</li>
+<li class="fragment"><a href="https://docs.github.com/es/get-started/git-basics/associating-text-editors-with-git" class="uri">https://docs.github.com/es/get-started/git-basics/associating-text-editors-with-git</a></li>
 </ul>
 </div>
-<p><a href="https://docs.github.com/es/get-started/git-basics/associating-text-editors-with-git" class="uri">https://docs.github.com/es/get-started/git-basics/associating-text-editors-with-git</a></p>
 </section>
 <section class="slide level2 center">
 <h2>A practicar situaciones horribles!</h2>
@@ -388,78 +380,78 @@
 </section>
 <section class="slide level2 center">
 <h2>Mi último commit me da vergüenza 1/2</h2>
-<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href=""></a>withr<span class="sc">::</span><span class="fu">local_language</span>(<span class="st">"es"</span>)</span>
-<span id="cb6-2"><a href=""></a>carpeta <span class="ot">&lt;-</span> withr<span class="sc">::</span><span class="fu">local_tempdir</span>()</span>
-<span id="cb6-3"><a href=""></a>saperlipopette<span class="sc">::</span><span class="fu">exo_one_small_change</span>(carpeta)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href=""></a>withr<span class="sc">::</span><span class="fu">local_language</span>(<span class="st">"es"</span>)</span>
+<span id="cb4-2"><a href=""></a>carpeta <span class="ot">&lt;-</span> withr<span class="sc">::</span><span class="fu">local_tempdir</span>()</span>
+<span id="cb4-3"><a href=""></a>saperlipopette<span class="sc">::</span><span class="fu">exo_one_small_change</span>(carpeta)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section class="slide level2 center">
 <h2>Mi último commit me da vergüenza 2/2</h2>
-<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href=""></a>withr<span class="sc">::</span><span class="fu">local_language</span>(<span class="st">"es"</span>)</span>
-<span id="cb7-2"><a href=""></a>carpeta <span class="ot">&lt;-</span> withr<span class="sc">::</span><span class="fu">local_tempdir</span>()</span>
-<span id="cb7-3"><a href=""></a>saperlipopette<span class="sc">::</span><span class="fu">exo_latest_message</span>(carpeta)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href=""></a>withr<span class="sc">::</span><span class="fu">local_language</span>(<span class="st">"es"</span>)</span>
+<span id="cb5-2"><a href=""></a>carpeta <span class="ot">&lt;-</span> withr<span class="sc">::</span><span class="fu">local_tempdir</span>()</span>
+<span id="cb5-3"><a href=""></a>saperlipopette<span class="sc">::</span><span class="fu">exo_latest_message</span>(carpeta)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section class="slide level2 center">
 <h2>Mi último commit me da vergüenza</h2>
 <p>15 minutos para resolver estos ejercicios. <span class="emoji" data-emoji="smiling_imp">😈</span></p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href=""></a>withr<span class="sc">::</span><span class="fu">local_language</span>(<span class="st">"es"</span>)</span>
-<span id="cb8-2"><a href=""></a>carpeta1 <span class="ot">&lt;-</span> withr<span class="sc">::</span><span class="fu">local_tempdir</span>()</span>
-<span id="cb8-3"><a href=""></a>saperlipopette<span class="sc">::</span><span class="fu">exo_one_small_change</span>(carpeta1)</span>
-<span id="cb8-4"><a href=""></a>carpeta2 <span class="ot">&lt;-</span> withr<span class="sc">::</span><span class="fu">local_tempdir</span>()</span>
-<span id="cb8-5"><a href=""></a>saperlipopette<span class="sc">::</span><span class="fu">exo_latest_message</span>(carpeta2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href=""></a>withr<span class="sc">::</span><span class="fu">local_language</span>(<span class="st">"es"</span>)</span>
+<span id="cb6-2"><a href=""></a>carpeta1 <span class="ot">&lt;-</span> withr<span class="sc">::</span><span class="fu">local_tempdir</span>()</span>
+<span id="cb6-3"><a href=""></a>saperlipopette<span class="sc">::</span><span class="fu">exo_one_small_change</span>(carpeta1)</span>
+<span id="cb6-4"><a href=""></a>carpeta2 <span class="ot">&lt;-</span> withr<span class="sc">::</span><span class="fu">local_tempdir</span>()</span>
+<span id="cb6-5"><a href=""></a>saperlipopette<span class="sc">::</span><span class="fu">exo_latest_message</span>(carpeta2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section class="slide level2 center">
 <h2>Descanso (5 minutos) 😮‍💨</h2>
 </section>
 <section class="slide level2 center">
 <h2>Hice el commit en una rama equivocada 1/2</h2>
-<div class="sourceCode" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href=""></a>withr<span class="sc">::</span><span class="fu">local_language</span>(<span class="st">"es"</span>)</span>
-<span id="cb9-2"><a href=""></a>carpeta <span class="ot">&lt;-</span> withr<span class="sc">::</span><span class="fu">local_tempdir</span>()</span>
-<span id="cb9-3"><a href=""></a>saperlipopette<span class="sc">::</span><span class="fu">exo_committed_to_main</span>(carpeta)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href=""></a>withr<span class="sc">::</span><span class="fu">local_language</span>(<span class="st">"es"</span>)</span>
+<span id="cb7-2"><a href=""></a>carpeta <span class="ot">&lt;-</span> withr<span class="sc">::</span><span class="fu">local_tempdir</span>()</span>
+<span id="cb7-3"><a href=""></a>saperlipopette<span class="sc">::</span><span class="fu">exo_committed_to_main</span>(carpeta)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section class="slide level2 center">
 <h2>Hice el commit en una rama equivocada 2/2</h2>
-<div class="sourceCode" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href=""></a>withr<span class="sc">::</span><span class="fu">local_language</span>(<span class="st">"es"</span>)</span>
-<span id="cb10-2"><a href=""></a>carpeta <span class="ot">&lt;-</span> withr<span class="sc">::</span><span class="fu">local_tempdir</span>()</span>
-<span id="cb10-3"><a href=""></a>saperlipopette<span class="sc">::</span><span class="fu">exo_committed_to_wrong</span>(carpeta)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href=""></a>withr<span class="sc">::</span><span class="fu">local_language</span>(<span class="st">"es"</span>)</span>
+<span id="cb8-2"><a href=""></a>carpeta <span class="ot">&lt;-</span> withr<span class="sc">::</span><span class="fu">local_tempdir</span>()</span>
+<span id="cb8-3"><a href=""></a>saperlipopette<span class="sc">::</span><span class="fu">exo_committed_to_wrong</span>(carpeta)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section class="slide level2 center">
 <h2>Hice el commit en una rama equivocada</h2>
 <p>15 minutos para resolver estos ejercicios. <span class="emoji" data-emoji="smiling_imp">😈</span></p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href=""></a>withr<span class="sc">::</span><span class="fu">local_language</span>(<span class="st">"es"</span>)</span>
-<span id="cb11-2"><a href=""></a>carpeta1 <span class="ot">&lt;-</span> withr<span class="sc">::</span><span class="fu">local_tempdir</span>()</span>
-<span id="cb11-3"><a href=""></a>saperlipopette<span class="sc">::</span><span class="fu">exo_committed_to_main</span>(carpeta1)</span>
-<span id="cb11-4"><a href=""></a>carpeta2 <span class="ot">&lt;-</span> withr<span class="sc">::</span><span class="fu">local_tempdir</span>()</span>
-<span id="cb11-5"><a href=""></a>saperlipopette<span class="sc">::</span><span class="fu">exo_committed_to_wrong</span>(carpeta2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href=""></a>withr<span class="sc">::</span><span class="fu">local_language</span>(<span class="st">"es"</span>)</span>
+<span id="cb9-2"><a href=""></a>carpeta1 <span class="ot">&lt;-</span> withr<span class="sc">::</span><span class="fu">local_tempdir</span>()</span>
+<span id="cb9-3"><a href=""></a>saperlipopette<span class="sc">::</span><span class="fu">exo_committed_to_main</span>(carpeta1)</span>
+<span id="cb9-4"><a href=""></a>carpeta2 <span class="ot">&lt;-</span> withr<span class="sc">::</span><span class="fu">local_tempdir</span>()</span>
+<span id="cb9-5"><a href=""></a>saperlipopette<span class="sc">::</span><span class="fu">exo_committed_to_wrong</span>(carpeta2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section class="slide level2 center">
 <h2>Mis cambios eran equivocados 1/2</h2>
-<div class="sourceCode" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href=""></a>withr<span class="sc">::</span><span class="fu">local_language</span>(<span class="st">"es"</span>)</span>
-<span id="cb12-2"><a href=""></a>carpeta <span class="ot">&lt;-</span> withr<span class="sc">::</span><span class="fu">local_tempdir</span>()</span>
-<span id="cb12-3"><a href=""></a>saperlipopette<span class="sc">::</span><span class="fu">exo_undo_commit</span>(carpeta)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href=""></a>withr<span class="sc">::</span><span class="fu">local_language</span>(<span class="st">"es"</span>)</span>
+<span id="cb10-2"><a href=""></a>carpeta <span class="ot">&lt;-</span> withr<span class="sc">::</span><span class="fu">local_tempdir</span>()</span>
+<span id="cb10-3"><a href=""></a>saperlipopette<span class="sc">::</span><span class="fu">exo_undo_commit</span>(carpeta)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section class="slide level2 center">
 <h2>Mis cambios eran equivocados 2/2</h2>
-<div class="sourceCode" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href=""></a>withr<span class="sc">::</span><span class="fu">local_language</span>(<span class="st">"es"</span>)</span>
-<span id="cb13-2"><a href=""></a>carpeta <span class="ot">&lt;-</span> withr<span class="sc">::</span><span class="fu">local_tempdir</span>()</span>
-<span id="cb13-3"><a href=""></a>saperlipopette<span class="sc">::</span><span class="fu">exo_revert_file</span>(carpeta)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href=""></a>withr<span class="sc">::</span><span class="fu">local_language</span>(<span class="st">"es"</span>)</span>
+<span id="cb11-2"><a href=""></a>carpeta <span class="ot">&lt;-</span> withr<span class="sc">::</span><span class="fu">local_tempdir</span>()</span>
+<span id="cb11-3"><a href=""></a>saperlipopette<span class="sc">::</span><span class="fu">exo_revert_file</span>(carpeta)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section class="slide level2 center">
 <h2>Mis cambios eran equivocados</h2>
 <p>15 minutos para resolver estos ejercicios. <span class="emoji" data-emoji="smiling_imp">😈</span></p>
-<div class="sourceCode" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href=""></a>withr<span class="sc">::</span><span class="fu">local_language</span>(<span class="st">"es"</span>)</span>
-<span id="cb14-2"><a href=""></a>carpeta1 <span class="ot">&lt;-</span> withr<span class="sc">::</span><span class="fu">local_tempdir</span>()</span>
-<span id="cb14-3"><a href=""></a>saperlipopette<span class="sc">::</span><span class="fu">exo_undo_commit</span>(carpeta1)</span>
-<span id="cb14-4"><a href=""></a>carpeta2 <span class="ot">&lt;-</span> withr<span class="sc">::</span><span class="fu">local_tempdir</span>()</span>
-<span id="cb14-5"><a href=""></a>saperlipopette<span class="sc">::</span><span class="fu">exo_revert_file</span>(carpeta2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href=""></a>withr<span class="sc">::</span><span class="fu">local_language</span>(<span class="st">"es"</span>)</span>
+<span id="cb12-2"><a href=""></a>carpeta1 <span class="ot">&lt;-</span> withr<span class="sc">::</span><span class="fu">local_tempdir</span>()</span>
+<span id="cb12-3"><a href=""></a>saperlipopette<span class="sc">::</span><span class="fu">exo_undo_commit</span>(carpeta1)</span>
+<span id="cb12-4"><a href=""></a>carpeta2 <span class="ot">&lt;-</span> withr<span class="sc">::</span><span class="fu">local_tempdir</span>()</span>
+<span id="cb12-5"><a href=""></a>saperlipopette<span class="sc">::</span><span class="fu">exo_revert_file</span>(carpeta2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section class="slide level2 center">
 <h2>Descanso (5 minutos) 😮‍💨</h2>
 </section>
 <section class="slide level2 center">
 <h2>Hice algo horrible con rebase -i u otra barbaridad</h2>
-<div class="sourceCode" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href=""></a>withr<span class="sc">::</span><span class="fu">local_language</span>(<span class="st">"es"</span>)</span>
-<span id="cb15-2"><a href=""></a>carpeta <span class="ot">&lt;-</span> withr<span class="sc">::</span><span class="fu">local_tempdir</span>()</span>
-<span id="cb15-3"><a href=""></a>saperlipopette<span class="sc">::</span><span class="fu">exo_time_machine</span>(carpeta)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href=""></a>withr<span class="sc">::</span><span class="fu">local_language</span>(<span class="st">"es"</span>)</span>
+<span id="cb13-2"><a href=""></a>carpeta <span class="ot">&lt;-</span> withr<span class="sc">::</span><span class="fu">local_tempdir</span>()</span>
+<span id="cb13-3"><a href=""></a>saperlipopette<span class="sc">::</span><span class="fu">exo_time_machine</span>(carpeta)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="fragment">
 <p>Soluciónalo tu también en 10 minutos.</p>
 </div>
