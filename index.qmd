@@ -95,11 +95,11 @@ Podéis escribir lo que es su forma de usar Git? Yo: Positron+terminal a veces.
 
 ## RStudio {.center}
 
-Mostrar donde esta Git, la console de R, la terminal.
+Mostrar donde esta Git, la consola de R, la terminal.
 
 ## Positron {.center}
 
-Mostrar donde esta Git, la console de R, la terminal.
+Mostrar donde esta Git, la consola de R, la terminal.
 
 ## Otra IDE {.center}
 
