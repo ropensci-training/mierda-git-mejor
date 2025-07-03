@@ -203,7 +203,7 @@ Es difícil usar y salir de Vim...
 
 . . .
 
-A lo mejor no entres!
+Entonces mejor no entres!
 
 
 ## Arreglar el editor de Git {.center}
@@ -406,6 +406,10 @@ Gracias a Andrea Gomez Vargas, Ariana Bardauil y Yanina Bellini Saibene.
 ::: {.notes}
 toilet paper rolls wrapped in different colors https://www.pexels.com/photo/toilet-paper-rolls-wrapped-in-different-colors-4031866/
 :::
+
+## Recursos de Git: en español
+
+- https://intro-programacion.netlify.app/08_git-2
 
 
 ## Git resources: General books
