@@ -375,7 +375,7 @@ Pero
 
 :fire: no elimina completamente el commit antiguo en GitHub <https://github.com/ropensci-training/saperlipopette/pull/26>
 
-## Conclusión
+## Conclusión {.center}
 
 ¿Cómo sufrir menos con Git?
 
@@ -387,7 +387,7 @@ Prevenir problemas: saber donde estás, no usar Vim, usar `.gitignore`.
 
 Aprender a salir de situaciones de miércoles.
 
-## Otras situaciones que no vimos
+## Otras situaciones que no vimos {.center}
 
 - <https://happygitwithr.com/push-rejected>
 - conflicts 
@@ -409,24 +409,25 @@ Gracias a Andrea Gomez Vargas, Ariana Bardauil y Yanina Bellini Saibene.
 toilet paper rolls wrapped in different colors https://www.pexels.com/photo/toilet-paper-rolls-wrapped-in-different-colors-4031866/
 :::
 
-## Recursos de Git: en español
+
+## Recursos de Git: en español {.center}
 
 - https://intro-programacion.netlify.app/08_git-2
 
 
-## Git resources: General books
+## Git resources: General books {.center}
 
 - Book [Git in Practice](https://www.manning.com/books/git-in-practice) by Mike McQuaid ([reading notes](https://masalmon.eu/2023/11/01/reading-notes-git-in-practice/))
 
 - Book [Pro Git](https://git-scm.com/book/en/v2) by Scott Chacon ([reading notes](https://masalmon.eu/2024/01/19/pro-git-scott-chacon-reading-notes/))
 
-## Git resources: R
+## Git resources: R {.center}
 
 - "What they forgot to teach you about R" [now](https://github.com/rstats-wtf/wtf-version-control-slides) (E. David Aja) and [then](https://github.com/rstudio-conf-2022/wtf-rstats/tree/main/materials) (Jenny Bryan, Shannon Pileggi).
 
 - [Happy Git and GitHub for the useR](https://happygitwithr.com/) by Jenny Bryan, the STAT 545 TAs, Jim Hester. 
 
-## Git resources: others
+## Git resources: others {.center}
 
 - ["Oh shit, Git!" by Katie Sylor-Miller](https://ohshitgit.com/)
 
