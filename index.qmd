@@ -266,6 +266,33 @@ saperlipopette::exo_latest_message(carpeta2)
 ```
 
 ## Descanso (5 minutos) 😮‍💨  {.center}
+## Mis cambios eran equivocados 1/2 {.center}
+
+```r
+withr::local_language("es")
+carpeta <- withr::local_tempdir()
+saperlipopette::exo_undo_commit(carpeta)
+```
+## Mis cambios eran equivocados 2/2 {.center}
+
+```r
+withr::local_language("es")
+carpeta <- withr::local_tempdir()
+saperlipopette::exo_revert_file(carpeta)
+```
+
+## Mis cambios eran equivocados {.center}
+
+15 minutos para resolver estos ejercicios. :smiling_imp:
+
+```r
+withr::local_language("es")
+carpeta1 <- withr::local_tempdir()
+saperlipopette::exo_undo_commit(carpeta1)
+carpeta2 <- withr::local_tempdir()
+saperlipopette::exo_revert_file(carpeta2)
+```
+
 
 ## Hice el commit en una rama equivocada 1/2 {.center}
 
@@ -295,33 +322,8 @@ carpeta2 <- withr::local_tempdir()
 saperlipopette::exo_committed_to_wrong(carpeta2)
 ```
 
-## Mis cambios eran equivocados 1/2 {.center}
-
-```r
-withr::local_language("es")
-carpeta <- withr::local_tempdir()
-saperlipopette::exo_undo_commit(carpeta)
-```
-## Mis cambios eran equivocados 2/2 {.center}
-
-```r
-withr::local_language("es")
-carpeta <- withr::local_tempdir()
-saperlipopette::exo_revert_file(carpeta)
-```
-
-## Mis cambios eran equivocados {.center}
-
-15 minutos para resolver estos ejercicios. :smiling_imp:
-
-```r
-withr::local_language("es")
-carpeta1 <- withr::local_tempdir()
-saperlipopette::exo_undo_commit(carpeta1)
-carpeta2 <- withr::local_tempdir()
-saperlipopette::exo_revert_file(carpeta2)
-```
 ## Descanso (5 minutos) 😮‍💨  {.center}
+
 
 ## Hice algo horrible con rebase -i u otra barbaridad {.center}
 
