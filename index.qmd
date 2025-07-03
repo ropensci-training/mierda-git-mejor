@@ -412,7 +412,7 @@ toilet paper rolls wrapped in different colors https://www.pexels.com/photo/toil
 
 ## Recursos de Git: en español {.center}
 
-- https://intro-programacion.netlify.app/08_git-2
+- <https://intro-programacion.netlify.app/08_git-2>
 
 
 ## Git resources: General books {.center}
