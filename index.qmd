@@ -34,13 +34,17 @@ rolls https://www.pexels.com/photo/toilet-paper-rolls-wrapped-in-different-color
 
 ## ¿Qué es Git? {.center}
 
-> Git se [parece] más a un sistema de archivos miniatura con algunas herramientas tremendamente poderosas desarrolladas sobre él, que a un VCS.
+Git es un Sistema de Control de Versión (VCS).
+
+## ¿Qué es Git? {.center}
+
+> Git se [parece] más a un sistema de archivos miniatura con algunas herramientas tremendamente poderosas desarrolladas sobre él, que a un VCS [(sistema de control de versión)].
 
 [Scott Chacon, Pro Git (traducción en español)](https://git-scm.com/book/es/v2/Inicio---Sobre-el-Control-de-Versiones-Fundamentos-de-Git)
 
 ## ¿Por qué Git? {.center}
 
-> Después de confirmar una copia instantánea en Git es muy difícil perderla, especialmente si envías tu base de datos a otro repositorio con regularidad.
+> Después de confirmar [un commit] en Git es muy difícil perderla, especialmente si envías [esos cambios] a otro repositorio con regularidad.
 
 [Scott Chacon, Pro Git (traducción en español)](https://git-scm.com/book/es/v2/Inicio---Sobre-el-Control-de-Versiones-Fundamentos-de-Git)
 
@@ -68,7 +72,8 @@ A veces duele. :scream:
 
 ::: {.incremental}
 
-- Push de datos secretos o largos
+- Push de datos secretos (llave de API por ejemplo)
+- Push de datos pesados
 - Commits que nos dan vergüenza
 - Commits en ramas equivocadas
 - ...
@@ -81,13 +86,13 @@ A veces duele. :scream:
 
 :muscle: Prevenir algunos problemas
 
-:muscle: Practicar la salida de algunas situaciones horribles
+:muscle: Practicar cómo salir exitosamente de algunas situaciones horribles
 
 :::
 
 ## Como vamos a trabajar {.center}
 
-En su entorno de Git habitual. 
+En tu entorno de Git habitual. 
 
 . . .
 
