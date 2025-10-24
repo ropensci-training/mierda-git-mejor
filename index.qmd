@@ -173,7 +173,7 @@ install.packages(
 
 - R para crear el ejercicio en otra carpeta.
 
-- R en la nueva sesión para leer las instrucionnes.
+- R en la nueva sesión para leer las instruciones.
 
 - Tus herramientas usuales para solucionar el problema de Git!
 
