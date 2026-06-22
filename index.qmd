@@ -212,6 +212,8 @@ carpeta <- withr::local_tempdir()
 saperlipopette::exo_check_editor(carpeta)
 ```
 
+<https://docs.ropensci.org/saperlipopette/reference/exo_check_editor.html>
+
 ## Arreglar el editor de Git {.center}
 
 Tienes 10 minutos para arreglarlo! 
