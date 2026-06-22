@@ -204,6 +204,8 @@ Entonces mejor no entres!
 
 ## Arreglar el editor de Git {.center}
 
+. . .
+
 ```r
 withr::local_language("es")
 carpeta <- withr::local_tempdir()
