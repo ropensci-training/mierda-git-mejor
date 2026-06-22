@@ -106,10 +106,6 @@ Mostrar donde esta Git, la consola de R, la terminal.
 
 Mostrar donde esta Git, la consola de R, la terminal.
 
-## Otra IDE {.center}
-
-Alguién se atreve a compartir?
-
 ## Prevención: `usethis::git_sitrep()` {.center}
 
 ```r
