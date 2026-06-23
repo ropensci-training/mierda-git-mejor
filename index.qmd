@@ -322,8 +322,6 @@ carpeta2 <- withr::local_tempdir()
 saperlipopette::exo_committed_to_wrong(carpeta2)
 ```
 
-## Descanso (5 minutos) 😮‍💨  {.center}
-
 
 ## Hice algo horrible con rebase -i u otra barbaridad {.center}
 
